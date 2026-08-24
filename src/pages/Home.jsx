@@ -199,36 +199,32 @@ function Home() {
               </div>
             </div>
 
-            {/* Card 2: Square - Dynamic Settings */}
+            {/* Card 2: Square - Quick Start */}
             <div className="bento-card card-square">
               <div className="card-header">
-                <h3>Choose Your Theme</h3>
+                <h3>Get Started in 3 Steps</h3>
+                <span className="card-badge">Quick</span>
               </div>
-              <div className="controls-container">
-                <div className="control-item">
-                  <span className="control-label">Theme Preview</span>
-                  <div style={{display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap'}}>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', cursor: 'pointer', border: '2px solid #3b82f6'}}></div>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #10b981, #06b6d4)', cursor: 'pointer'}}></div>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #f59e0b, #ef4444)', cursor: 'pointer'}}></div>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #8b5cf6, #ec4899)', cursor: 'pointer'}}></div>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #06b6d4, #14b8a6)', cursor: 'pointer'}}></div>
-                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: '#64748b', cursor: 'pointer'}}></div>
+              <div className="social-integration">
+                <div className="social-connect-item">
+                  <div className="social-icon linkedin">1</div>
+                  <div className="social-info">
+                    <h4>Create Account</h4>
+                    <p>Sign up with email</p>
                   </div>
                 </div>
-                <div className="control-item">
-                  <span className="control-label">Public Profile</span>
-                  <div className="toggle-switch active">
-                    <div className="toggle-slider"></div>
+                <div className="social-connect-item">
+                  <div className="social-icon github">2</div>
+                  <div className="social-info">
+                    <h4>Fill Your Bio</h4>
+                    <p>Add story & skills</p>
                   </div>
                 </div>
-                <div className="control-item">
-                  <span className="control-label">Featured Skills</span>
-                  <div className="avatar-stack">
-                    <div className="avatar" style={{background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'}}>JS</div>
-                    <div className="avatar" style={{background: 'linear-gradient(135deg, #10b981, #06b6d4)'}}>TS</div>
-                    <div className="avatar" style={{background: 'linear-gradient(135deg, #f59e0b, #ef4444)'}}>UI</div>
-                    <div className="avatar-more">+8</div>
+                <div className="social-connect-item">
+                  <div className="social-icon twitter">3</div>
+                  <div className="social-info">
+                    <h4>Share & Connect</h4>
+                    <p>Go public</p>
                   </div>
                 </div>
               </div>
@@ -282,27 +278,37 @@ function Home() {
               </div>
             </div>
 
-            {/* Card 5: Square - Quick Start */}
+            {/* Card 5: Square - Dynamic Settings */}
             <div className="bento-card card-square">
-              <h3 style={{margin: '0 0 0.75rem 0', fontSize: '1rem', fontWeight: '700'}}>Get Started</h3>
-              <div style={{display: 'grid', gap: '0.5rem'}}>
-                <div style={{paddingLeft: '1.5rem', position: 'relative', fontSize: '0.8125rem'}}>
-                  <span style={{position: 'absolute', left: '0', top: '0', background: 'var(--accent)', color: 'white', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: '700'}}>1</span>
-                  <strong>Create Account</strong>
-                  <br/>
-                  <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem'}}>Sign up with email</span>
+              <div className="card-header">
+                <h3>Choose Your Theme</h3>
+              </div>
+              <div className="controls-container">
+                <div className="control-item">
+                  <span className="control-label">Theme Preview</span>
+                  <div style={{display: 'flex', gap: '0.5rem', marginTop: '0.5rem', flexWrap: 'wrap'}}>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', cursor: 'pointer', border: '2px solid #3b82f6'}}></div>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #10b981, #06b6d4)', cursor: 'pointer'}}></div>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #f59e0b, #ef4444)', cursor: 'pointer'}}></div>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #8b5cf6, #ec4899)', cursor: 'pointer'}}></div>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #06b6d4, #14b8a6)', cursor: 'pointer'}}></div>
+                    <div style={{width: '32px', height: '32px', borderRadius: '8px', background: '#64748b', cursor: 'pointer'}}></div>
+                  </div>
                 </div>
-                <div style={{paddingLeft: '1.5rem', position: 'relative', fontSize: '0.8125rem'}}>
-                  <span style={{position: 'absolute', left: '0', top: '0', background: 'var(--accent)', color: 'white', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: '700'}}>2</span>
-                  <strong>Fill Your Bio</strong>
-                  <br/>
-                  <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem'}}>Add story & skills</span>
+                <div className="control-item">
+                  <span className="control-label">Public Profile</span>
+                  <div className="toggle-switch active">
+                    <div className="toggle-slider"></div>
+                  </div>
                 </div>
-                <div style={{paddingLeft: '1.5rem', position: 'relative', fontSize: '0.8125rem'}}>
-                  <span style={{position: 'absolute', left: '0', top: '0', background: 'var(--accent)', color: 'white', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: '700'}}>3</span>
-                  <strong>Share & Connect</strong>
-                  <br/>
-                  <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem'}}>Go public</span>
+                <div className="control-item">
+                  <span className="control-label">Featured Skills</span>
+                  <div className="avatar-stack">
+                    <div className="avatar" style={{background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'}}>JS</div>
+                    <div className="avatar" style={{background: 'linear-gradient(135deg, #10b981, #06b6d4)'}}>TS</div>
+                    <div className="avatar" style={{background: 'linear-gradient(135deg, #f59e0b, #ef4444)'}}>UI</div>
+                    <div className="avatar-more">+8</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -390,8 +396,32 @@ function Home() {
       {/* Section 2: Features Highlight */}
       <section className="features-highlight">
         <div className="section-container">
+          <div className="section-header">
+            <h2 className="section-title">Features Highlight</h2>
+          </div>
           <div className="features-highlight-grid">
             <div className="feature-highlight-item">
+              <div className="feature-highlight-visual">
+                <div className="visual-placeholder">
+                  <div className="analytics-chart" style={{width: '100%', height: '200px'}}>
+                    <Line data={chartData} options={chartOptions} />
+                  </div>
+                  <div style={{display: 'flex', gap: '2rem', marginTop: '1rem', justifyContent: 'center'}}>
+                    <div>
+                      <span style={{fontSize: '1.5rem', fontWeight: '700', color: 'var(--text-primary)'}}>2.4K</span>
+                      <span style={{display: 'block', fontSize: '0.75rem', color: 'var(--text-tertiary)'}}>Profile Views</span>
+                    </div>
+                    <div>
+                      <span style={{fontSize: '1.5rem', fontWeight: '700', color: 'var(--text-primary)'}}>847</span>
+                      <span style={{display: 'block', fontSize: '0.75rem', color: 'var(--text-tertiary)'}}>Shares</span>
+                    </div>
+                    <div>
+                      <span style={{fontSize: '1.5rem', fontWeight: '700', color: 'var(--text-primary)'}}>156</span>
+                      <span style={{display: 'block', fontSize: '0.75rem', color: 'var(--text-tertiary)'}}>Connections</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="feature-highlight-content">
                 <h3>Advanced Analytics</h3>
                 <p>Track who views your profile, how long they stay, and which sections they explore most.</p>
@@ -402,25 +432,9 @@ function Home() {
                   <li>Weekly reports</li>
                 </ul>
               </div>
-              <div className="feature-highlight-visual">
-                <div className="visual-placeholder">
-                  <div className="chart-bar"></div>
-                  <div className="chart-bar"></div>
-                  <div className="chart-bar"></div>
-                </div>
-              </div>
             </div>
 
             <div className="feature-highlight-item">
-              <div className="feature-highlight-visual">
-                <div className="visual-placeholder">
-                  <div className="theme-circles">
-                    <div className="circle blue"></div>
-                    <div className="circle green"></div>
-                    <div className="circle purple"></div>
-                  </div>
-                </div>
-              </div>
               <div className="feature-highlight-content">
                 <h3>50+ Premium Themes</h3>
                 <p>Choose from our curated collection of beautiful, professional themes designed by experts.</p>
@@ -431,9 +445,30 @@ function Home() {
                   <li>Mobile-optimized</li>
                 </ul>
               </div>
+              <div className="feature-highlight-visual">
+                <div className="profile-preview-card theme-blue" style={{maxWidth: '450px', padding: '2rem', minHeight: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem'}}>
+                  <h2 style={{fontSize: '1.5rem', fontWeight: 800, margin: 0}}>John Dev</h2>
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=happy" alt="Theme Preview" style={{width: '90px', height: '90px', borderRadius: '50%', border: '4px solid rgba(59,130,246,0.3)'}} />
+                  <p style={{fontSize: '1rem', color: 'var(--accent)', margin: 0, fontWeight: 700}}>Full Stack Engineer</p>
+                  <p style={{fontSize: '0.85rem', color: 'var(--text-tertiary)', margin: 0}}>john@dev.io</p>
+                  <div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center'}}>
+                    <span style={{padding: '0.25rem 0.75rem', borderRadius: '1rem', background: 'rgba(59,130,246,0.1)', fontSize: '0.75rem', fontWeight: 600}}>Dark</span>
+                    <span style={{padding: '0.25rem 0.75rem', borderRadius: '1rem', background: 'rgba(16,185,129,0.1)', fontSize: '0.75rem', fontWeight: 600}}>Light</span>
+                    <span style={{padding: '0.25rem 0.75rem', borderRadius: '1rem', background: 'rgba(234,179,8,0.1)', fontSize: '0.75rem', fontWeight: 600}}>Minimal</span>
+                  </div>
+                </div>
+              </div>
+              
             </div>
 
             <div className="feature-highlight-item">
+              <div className="feature-highlight-visual">
+                <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'1rem',padding:'1rem 0',flexWrap:'wrap'}}>
+                  <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}><div style={{width:'60px',height:'60px',borderRadius:'50%',background:'linear-gradient(135deg,#3b82f6,#8b5cf6)',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontWeight:700,fontSize:'1.2rem'}}>in</div><div><h4 style={{margin:0,fontWeight:700}}>LinkedIn</h4><p style={{margin:0,fontSize:'0.8rem'}}>Connect network</p></div></div>
+                  <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}><div style={{width:'60px',height:'60px',borderRadius:'50%',background:'linear-gradient(135deg,#10b981,#06b6d4)',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontWeight:700,fontSize:'1.2rem'}}>⚙</div><div><h4 style={{margin:0,fontWeight:700}}>GitHub</h4><p style={{margin:0,fontSize:'0.8rem'}}>Showcase projects</p></div></div>
+                  <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}><div style={{width:'60px',height:'60px',borderRadius:'50%',background:'linear-gradient(135deg,#8b5cf6,#ec4899)',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontWeight:700,fontSize:'1.2rem'}}>𝕏</div><div><h4 style={{margin:0,fontWeight:700}}>Twitter</h4><p style={{margin:0,fontSize:'0.8rem'}}>Social links</p></div></div>
+                </div>
+              </div>
               <div className="feature-highlight-content">
                 <h3>Social Integration</h3>
                 <p>Connect your LinkedIn, GitHub, Twitter and other platforms to showcase your work.</p>
@@ -443,16 +478,6 @@ function Home() {
                   <li>Portfolio imports</li>
                   <li>Social media links</li>
                 </ul>
-              </div>
-              <div className="feature-highlight-visual">
-                <div className="visual-placeholder">
-                  <div className="social-dots">
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
