@@ -314,7 +314,7 @@ function Home() {
             </div>
 
             {/* Card 6: Wide - Social Integration (2 columns wide) */}
-            <div className="bento-card card-code" style={{gridColumn: 'span 2'}}>
+            <div className="bento-card card-code">
               <div className="card-header">
                 <h3>Connect Your Social Profiles</h3>
                 <span className="copy-badge">Sync</span>
@@ -406,7 +406,7 @@ function Home() {
                   <div className="analytics-chart" style={{width: '100%', height: '200px'}}>
                     <Line data={chartData} options={chartOptions} />
                   </div>
-                  <div style={{display: 'flex', gap: '2rem', marginTop: '1rem', justifyContent: 'center'}}>
+                  {/* <div style={{display: 'flex', gap: '2rem', marginTop: '1rem', justifyContent: 'center'}}>
                     <div>
                       <span style={{fontSize: '1.5rem', fontWeight: '700', color: 'var(--text-primary)'}}>2.4K</span>
                       <span style={{display: 'block', fontSize: '0.75rem', color: 'var(--text-tertiary)'}}>Profile Views</span>
@@ -419,7 +419,7 @@ function Home() {
                       <span style={{fontSize: '1.5rem', fontWeight: '700', color: 'var(--text-primary)'}}>156</span>
                       <span style={{display: 'block', fontSize: '0.75rem', color: 'var(--text-tertiary)'}}>Connections</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="feature-highlight-content">

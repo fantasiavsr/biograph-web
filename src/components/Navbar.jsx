@@ -1,10 +1,27 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Navbar.css'
 
 function Navbar({ theme, toggleTheme, isAuthenticated, user, onLogout }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [lastScroll, setLastScroll] = useState(0)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY
+      const goingUp = y < lastScroll
+      if (y <= 10) {
+        setScrolled(false) // visible at very top
+      } else {
+        setScrolled(y > 20 && !goingUp)
+      }
+      setLastScroll(y)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [lastScroll])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -21,7 +38,7 @@ function Navbar({ theme, toggleTheme, isAuthenticated, user, onLogout }) {
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${(scrolled && !isOpen) ? 'hide' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <span className="logo-icon">✦</span>
