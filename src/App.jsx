@@ -35,6 +35,34 @@ function App() {
     localStorage.setItem('theme', theme)
   }, [theme])
 
+  useEffect(() => {
+    // Update page title based on route
+    const updateTitle = () => {
+      const path = window.location.pathname
+      let title = 'BiographWeb'
+
+      if (path === '/') {
+        title = 'BiographWeb - Create Your Professional Biography'
+      } else if (path === '/products') {
+        title = 'Plans & Pricing - BiographWeb'
+      } else if (path === '/login') {
+        title = 'Login - BiographWeb'
+      } else if (path === '/register') {
+        title = 'Sign Up - BiographWeb'
+      } else if (path === '/dashboard') {
+        title = 'Dashboard - BiographWeb'
+      } else if (path.startsWith('/bio/')) {
+        const username = path.split('/bio/')[1]
+        title = `${username}'s Biography - BiographWeb`
+      }
+
+      document.title = title
+      document.getElementById('page-title')?.setAttribute('content', title)
+    }
+
+    updateTitle()
+  }, [])
+
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light')
   }

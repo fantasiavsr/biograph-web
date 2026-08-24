@@ -109,17 +109,35 @@ export const authUtils = {
 
 // LocalStorage helpers
 export const storageUtils = {
-  setAuth: (user) => {
-    localStorage.setItem('auth', JSON.stringify({
-      user,
-      token: `token_${user.id}_${Date.now()}`,
-      timestamp: Date.now()
-    }))
+  setAuth: (authData) => {
+    // authData should have { user, token, timestamp }
+    if (authData && authData.user) {
+      localStorage.setItem('auth', JSON.stringify(authData))
+    } else if (authData) {
+      // If only user object is passed, create full auth structure
+      localStorage.setItem('auth', JSON.stringify({
+        user: authData,
+        token: `token_${authData.id}_${Date.now()}`,
+        timestamp: Date.now()
+      }))
+    }
   },
 
   getAuth: () => {
-    const auth = localStorage.getItem('auth')
-    return auth ? JSON.parse(auth) : null
+    try {
+      const auth = localStorage.getItem('auth')
+      if (!auth) return null
+      const parsed = JSON.parse(auth)
+      // Ensure we return the correct structure
+      if (parsed && parsed.user) {
+        return parsed
+      }
+      // Fallback if structure is wrong
+      return null
+    } catch (e) {
+      console.error('Error parsing auth from localStorage:', e)
+      return null
+    }
   },
 
   clearAuth: () => {

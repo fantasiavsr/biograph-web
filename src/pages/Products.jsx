@@ -16,53 +16,53 @@ function Products() {
   const products = [
     {
       id: 1,
-      name: 'Premium',
-      monthlyPrice: 49,
-      yearlyPrice: 39,
+      name: 'Starter',
+      monthlyPrice: 9,
+      yearlyPrice: 7,
       period: '/month',
       features: [
-        'Up to 100 projects',
-        'Advanced analytics dashboard',
-        'Priority email support',
-        'Custom branding options',
-        'Team collaboration tools',
-        '50GB cloud storage'
+        'One public biography',
+        'Custom profile URL',
+        'Basic analytics',
+        '5 design themes',
+        'Social media links',
+        'Skills & achievements section'
       ],
       popular: false
     },
     {
       id: 2,
       name: 'Professional',
-      monthlyPrice: 99,
-      yearlyPrice: 79,
+      monthlyPrice: 29,
+      yearlyPrice: 23,
       period: '/month',
       features: [
-        'Unlimited projects',
-        'Real-time analytics & insights',
-        '24/7 priority support',
-        'Full custom branding',
-        'Advanced team collaboration',
-        '500GB cloud storage',
-        'API access & webhooks',
-        'Custom integrations'
+        'Unlimited biographies',
+        'Advanced analytics dashboard',
+        '50+ premium themes',
+        'Portfolio gallery',
+        'Custom domain support',
+        'Priority email support',
+        'Export as PDF',
+        'Team collaboration'
       ],
       popular: true
     },
     {
       id: 3,
       name: 'Enterprise',
-      monthlyPrice: 199,
-      yearlyPrice: 159,
+      monthlyPrice: 99,
+      yearlyPrice: 79,
       period: '/month',
       features: [
         'Everything in Professional',
         'Dedicated account manager',
-        'Custom SLA guarantees',
-        'Advanced security features',
-        'On-premise deployment',
-        'Unlimited storage',
-        'Training & onboarding',
-        'White-label solutions'
+        'Custom branding & white-label',
+        'Advanced API access',
+        'Unlimited portfolio items',
+        '24/7 priority support',
+        'Custom integrations',
+        'SSO & advanced security'
       ],
       popular: false
     }
@@ -71,49 +71,49 @@ function Products() {
   const testimonials = [
     {
       id: 1,
-      text: "This platform has completely transformed how our team works. The interface is incredibly intuitive, and the features are exactly what we needed to scale our operations.",
+      text: "BiographWeb completely transformed how I present my professional profile. My biography now gets noticed by recruiters and opportunities come my way!",
       author: "Sarah Johnson",
-      role: "CEO, TechCorp",
+      role: "Product Manager, TechCorp",
       rating: 5,
       avatar: "SJ"
     },
     {
       id: 2,
-      text: "Outstanding customer support and rock-solid reliability. We've seen a 40% increase in productivity since making the switch. Best decision we made this year.",
+      text: "The platform is incredibly intuitive. I created a stunning biography in 15 minutes without any design experience. Highly recommend!",
       author: "Michael Chen",
-      role: "CTO, StartupXYZ",
+      role: "Freelance Designer",
       rating: 5,
       avatar: "MC"
     },
     {
       id: 3,
-      text: "The best investment we've made this year. Clean design, powerful features, and excellent value for money. Our clients love the results.",
+      text: "Professional, elegant, and powerful. BiographWeb gave my portfolio exactly the presentation it deserved. Worth every penny!",
       author: "Emma Williams",
-      role: "Product Manager, DesignCo",
+      role: "Director, DesignCo",
       rating: 5,
       avatar: "EW"
     },
     {
       id: 4,
-      text: "Seamless integration with our existing tools. The API documentation is top-notch, and the performance has exceeded our expectations.",
+      text: "I love the analytics dashboard. Being able to see who views my profile and how they interact with my work is invaluable.",
       author: "David Park",
-      role: "Lead Developer, CodeBase",
+      role: "Software Engineer",
       rating: 5,
       avatar: "DP"
     },
     {
       id: 5,
-      text: "Game-changer for our workflow. The real-time analytics give us insights we never had before. Highly recommend to any growing team.",
+      text: "As a freelancer, having a professional bio online has been a game-changer for attracting clients. BiographWeb makes it so easy!",
       author: "Lisa Anderson",
-      role: "Director of Ops, GrowthLab",
+      role: "Freelance Writer",
       rating: 5,
       avatar: "LA"
     },
     {
       id: 6,
-      text: "Incredible platform with exceptional uptime. The team collaboration features have made remote work so much easier for us.",
+      text: "The customer support team is phenomenal. Whenever I had a question, they responded within hours with helpful solutions.",
       author: "James Rodriguez",
-      role: "VP Engineering, CloudTech",
+      role: "Marketing Manager",
       rating: 5,
       avatar: "JR"
     }
@@ -126,9 +126,9 @@ function Products() {
   return (
     <div className="products">
       <section className="products-header">
-        <h1 className="products-title">Choose Your Plan</h1>
+        <h1 className="products-title">BiographWeb Plans</h1>
         <p className="products-subtitle">
-          Flexible pricing that scales with your needs. All plans include a 14-day free trial.
+          Choose the perfect plan to showcase your professional story. All plans include profile customization and analytics.
         </p>
 
         {/* Billing Toggle */}
@@ -186,7 +186,7 @@ function Products() {
                 </ul>
 
                 <button className={`btn ${product.popular ? 'btn-primary' : 'btn-secondary'} btn-full`}>
-                  Get Started
+                  Start Free Trial
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -200,9 +200,9 @@ function Products() {
       <section className="testimonials">
         <div className="testimonials-container">
           <div className="testimonials-header">
-            <h2 className="section-title">Loved by thousands of teams</h2>
+            <h2 className="section-title">Loved by creators and professionals</h2>
             <p className="section-subtitle">
-              See what our customers have to say about their experience
+              See what our users have to say about their BiographWeb experience
             </p>
           </div>
           <div className="testimonials-masonry">

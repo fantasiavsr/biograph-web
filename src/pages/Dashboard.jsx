@@ -5,15 +5,15 @@ import './Dashboard.css'
 function Dashboard({ user, onUpdateUser }) {
   const [activeTab, setActiveTab] = useState('view')
   const [bioData, setBioData] = useState({
-    name: user.name,
-    title: user.title || '',
-    bio: user.bio || '',
-    skills: user.skills.join(', '),
-    location: user.location || '',
-    twitter: user.socialLinks?.twitter || '',
-    linkedin: user.socialLinks?.linkedin || '',
-    github: user.socialLinks?.github || '',
-    profileTheme: user.profileTheme || 'blue'
+    name: user?.name || '',
+    title: user?.title || '',
+    bio: user?.bio || '',
+    skills: (user?.skills && Array.isArray(user.skills) ? user.skills.join(', ') : ''),
+    location: user?.location || '',
+    twitter: user?.socialLinks?.twitter || '',
+    linkedin: user?.socialLinks?.linkedin || '',
+    github: user?.socialLinks?.github || '',
+    profileTheme: user?.profileTheme || 'blue'
   })
   const [saved, setSaved] = useState(false)
 

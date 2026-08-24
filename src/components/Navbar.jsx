@@ -44,6 +44,9 @@ function Navbar({ theme, toggleTheme, isAuthenticated, user, onLogout }) {
             <Link to="/" className="navbar-link" onClick={closeMenu}>
               Home
             </Link>
+            <Link to="/products" className="navbar-link" onClick={closeMenu}>
+              Plans
+            </Link>
             {isAuthenticated && (
               <Link to="/dashboard" className="navbar-link" onClick={closeMenu}>
                 Dashboard
